@@ -35,6 +35,7 @@ Junit
 - [x] Ensure the project folder is the root of the Git repository
 - [x] Add all project files into the package at.fhj.msd
 - [x] Push the initial Maven setup to GitHub
+- [x] Add the other developer info,Update pom.xml and .gitignore based on the structure of the previous Maven project
 - [ ] Test that the Maven project compiles and runs successfully
 - [ ] Create a sample class (e.g., Hello.java) to verify setup
 - [ ] Create readme branch and add README.md
