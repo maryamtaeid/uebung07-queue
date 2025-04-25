@@ -4,7 +4,7 @@ package at.fhj.msd;
  * Abstract base class for concrete drink classes.
  * This class provides common functionality for all drinks.
  */
-public abstract class Drink {
+public abstract  class Drink {
     
     /**
      * Name of the drink.
@@ -39,7 +39,7 @@ public abstract class Drink {
      *
      * @return true if the drink is alcoholic, false otherwise
      */
-    public abstract boolean isAlcoholic();
+    String getName();
 
     /**
      * Gets the name of the drink.
