@@ -1,4 +1,5 @@
 package at.fhj.msd;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileDescriptor;
 import java.io.FileOutputStream;
@@ -9,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 
 class TestDrink implements Drink {
 
@@ -91,10 +91,11 @@ public class DrinkQueueTest {
 
         drinkQueue.printQueue();
 
-        String expectedOutput = "Pepsi\nJuice\n";
-        assertEquals(expectedOutput, outContent.toString());
+        String actualOutput = outContent.toString().replace("\r\n", "\n").trim();
+        String expectedOutput = "Pepsi\nJuice";
 
-        // برگرداندن System.out به حالت عادی
+        assertEquals(expectedOutput, actualOutput);
+
         System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
     }
 }
