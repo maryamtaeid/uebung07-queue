@@ -12,6 +12,6 @@ public class StringQueue extends IQueue {
      * @param maxSize the maximum number of elements the queue can hold
      */
     public StringQueue(int maxSize) {
-        super(maxSize); // صدا زدن constructor پدر (IQueue)
+        super(maxSize); 
     }
 }
