@@ -1,3 +1,7 @@
 *.class
 target/
 *.iml
+.vscode/
+.pdf
+.log
+log/

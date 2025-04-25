@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"at.fhj.msd","l":"App"},{"p":"at.fhj.msd","l":"Drink"},{"p":"at.fhj.msd","l":"IQueue"},{"p":"at.fhj.msd","l":"Liquid"},{"p":"at.fhj.msd","l":"SimpleDrink"},{"p":"at.fhj.msd","l":"StringQueue"}];updateSearchResults();
