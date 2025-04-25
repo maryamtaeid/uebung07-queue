@@ -1,22 +1,21 @@
 package at.fhj.msd;
+
 /**
- * Class represents a simple drink liquid which can be used in
- * drinks
+ * Class represents a simple drink liquid which can be used in drinks
  */
-public class SimpleDrink extends Drink{
-    /**
-     * uses only one liquid
-     */
+public class SimpleDrink implements Drink {
+
+    private String name;
     protected Liquid l;
+
     /**
-     * Creates a SimpleDrink object with given age and
-     * liquid
+     * Creates a SimpleDrink object with given name and liquid
      *
      * @param name name of drink
-     * @param l only liquid in drink
+     * @param l    only liquid in drink
      */
-    SimpleDrink(String name, Liquid l){
-        super(name);
+    public SimpleDrink(String name, Liquid l) {
+        this.name = name;
         this.l = l;
     }
 
@@ -39,6 +38,7 @@ public class SimpleDrink extends Drink{
     public double getAlcoholPercent() {
         return l.getAlcoholPercent();
     }
+
     /**
      * Gives information if drink is alcoholic or not
      *
@@ -46,9 +46,22 @@ public class SimpleDrink extends Drink{
      */
     @Override
     public boolean isAlcoholic() {
-        if(l.getAlcoholPercent() > 0){
-            return true;
-        }
-        return false;
+        return l.getAlcoholPercent() > 0;
+    }
+
+    /**
+     * Gets the name of the drink
+     */
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Sets the name of the drink
+     */
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }
