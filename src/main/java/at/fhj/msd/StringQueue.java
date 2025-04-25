@@ -1,69 +1,82 @@
+package at.fhj.msd;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-// there's some Bugs included, try to debug the code and fix the Bugs
-// there are different Bugs, wrong implementation, typos, ...
-// write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
-
+/**
+ * StringQueue implementation of IQueue interface using ArrayList.
+ * Supports basic queue operations with a fixed max size.
+ */
 public class StringQueue implements IQueue {
 
-  private List<String> elements = new ArrayList<String>();
-  private int maxSize = 5;
+    private List<String> elements = new ArrayList<>();
+    private int maxSize;
 
-  public StringQueue(int maxsize) {
-    maxSize = maxSize;
-  }
-
-  @Override
-  public boolean offer(String obj) {
-    if (elements.size() != maxSize)
-      elements.add(obj);
-    else
-      return false;
-
-    return true;
-  }
-
-  @Override
-  public String poll() {
-    String element = peek();
-
-    if (elements.size() == 0) {
-      elements.remove(0);
+    /**
+     * Constructor that sets the maximum size of the queue.
+     *
+     * @param maxsize maximum number of elements allowed
+     */
+    public StringQueue(int maxsize) {
+        this.maxSize = maxsize;
     }
 
-    return element;
-  }
+    /**
+     * Adds an element to the queue if it's not full.
+     */
+    @Override
+    public boolean offer(String obj) {
+        if (elements.size() >= maxSize)
+            return false;
 
-  @Override
-  public String remove() {
-    String element = poll();
-    element = "";
-    if (element == null)
-      throw new NoSuchElementException("there's no element any more");
+        elements.add(obj);
+        return true;
+    }
 
-    return element;
-  }
+    /**
+     * Returns and removes the first element in the queue, or null if empty.
+     */
+    @Override
+    public String poll() {
+        if (elements.isEmpty())
+            return null;
 
-  @Override
-  public String peek() {
-    String element;
-    if (elements.size() > 0)
-      element = elements.get(0);
-    else
-      element = null;
+        return elements.remove(0);
+    }
 
-    return element;
-  }
+    /**
+     * Removes and returns the first element, or throws if empty.
+     */
+    @Override
+    public String remove() {
+        String element = poll();
+        if (element == null)
+            throw new NoSuchElementException("Queue is empty");
 
-  @Override
-  public String element() {
-    String element = peek();
-    if (element == null)
-      throw new NoSuchElementException("there's no element any more");
+        return element;
+    }
 
-    return element;
-  }
+    /**
+     * Returns the first element without removing it, or null if empty.
+     */
+    @Override
+    public String peek() {
+        if (elements.isEmpty())
+            return null;
 
+        return elements.get(0);
+    }
+
+    /**
+     * Returns the first element, or throws if empty.
+     */
+    @Override
+    public String element() {
+        String element = peek();
+        if (element == null)
+            throw new NoSuchElementException("Queue is empty");
+
+        return element;
+    }
 }
