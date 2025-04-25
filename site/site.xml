@@ -1,8 +1,16 @@
 <project name="Drink Queue Site">
-<body>
-<menu name="Team">
-<item name="Maryam Taeid" href="MaryamTaeid.html" />
-<item name="Helma Arjmand" href="HelmaArjmand.html" />
-</menu>
-</body>
+  <body>
+
+    <menu name="Team">
+      <item name="Maryam Taeid" href="MaryamTaeid.html" />
+      <item name="Helma Arjmand" href="HelmaArjmand.html" />
+    </menu>
+
+    <menu name="Reports">
+      <item name="JavaDoc" href="apidocs/index.html" />
+      <item name="Test Coverage (JaCoCo)" href="jacoco/index.html" />
+      <item name="Unit Test Results" href="surefire-report.html" />
+    </menu>
+
+  </body>
 </project>
