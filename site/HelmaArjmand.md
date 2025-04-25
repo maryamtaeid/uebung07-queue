@@ -16,9 +16,7 @@ Task overview
 
 Project description
 
-Maven Site Documentation
-
-6. Creating a personal Markdown file (HelmaArjmand.md) for the Maven Site.
+6. Maven Site Documentation: Creating a personal Markdown file (HelmaArjmand.md) for the Maven Site.
 
 7. Testing & Collaboration
 
