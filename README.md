@@ -42,6 +42,4 @@ Junit
 - [x] Create Javadoc branch
 - [x] Create test branch
 - [x] Test that the Maven project compiles and runs successfully
-- [ ] Create a sample class (e.g., Hello.java) to verify setup
-- [ ] Create readme branch and add README.md
-- [ ] Add task list to README and update status as tasks are completed
+- [x] Create Maven_site 
